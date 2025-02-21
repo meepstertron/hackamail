@@ -1,4 +1,4 @@
-import logo from "./hackamail.svg";
+import logo from "./hackamail.png";
 
 export function Welcome({ message }: { message: string }) {
   return (
