@@ -18,7 +18,7 @@
     "@react-router/dev": "^7.1.5",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20",
-    "@types/react": "^19.0.1",
+    "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.1",
     "@vercel/node": "^5.1.2",
     "@vercel/react-router": "^1.0.2",
