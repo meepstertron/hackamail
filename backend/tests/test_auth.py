@@ -60,5 +60,5 @@ def test_get_user_identity(mock_web_client_import, mock_web_client):
         "email": "test@example.com"
     }
     
-def this_will_fail():
+def test_this_will_fail():
     assert 1 + 1 == 3
