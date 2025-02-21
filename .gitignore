@@ -7,3 +7,13 @@
 
 # Vercel
 /.vercel/
+
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Slack Stuff that shouldnt be public
+*.env
