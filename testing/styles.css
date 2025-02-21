@@ -1,0 +1,134 @@
+:root {
+    --dark-bg: #0A0A14;
+    --text-color: #FFFFFF;
+    --accent-color: #FF5A5F;
+    --card-bf: rgba(20, 20, 40, 0.7);
+    --button-hover: #FF7A7F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;   
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    flex-grow: 1;
+}
+
+.hero, .about {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.slack-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.slack-link:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.slack-icon {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
