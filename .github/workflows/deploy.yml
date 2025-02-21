@@ -1,0 +1,38 @@
+name: Test backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - backend/**
+      - docker-compose.yml
+      - .github/workflows/**
+
+env:
+  REGISTRY: registery.hexagonical.ch
+  IMAGE_NAME: hackamail-backend
+  IMAGE_TAG: latest
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install pytest
+          pip install -r requirements.txt
+          
+      - name: Run tests
+        run: |
+          cd backend
+          pytest
