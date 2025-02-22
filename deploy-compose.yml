@@ -1,8 +1,8 @@
 services:
   backend:
-    build: ./backend
+    image: [image(1)]
     ports:
-      - "5000:5000"
+      - "[port]:5000"
     volumes:
       - ./backend:/app
     depends_on:
@@ -15,7 +15,7 @@ services:
   db:
     image: postgres:12
     ports:
-      - "5432:5432"
+      - "[port]:5432"
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=postgres
@@ -25,6 +25,6 @@ services:
   # Adminer is a database management tool that allows you to manage databases, tables, columns, relations, indexes, users, permissions, and more. Use it for debugging or just poking around. dont deploy in production
     image: adminer
     ports:
-      - "8080:8080"
+      - "[port]:8080"
     depends_on:
       - db
